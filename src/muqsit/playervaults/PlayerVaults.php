@@ -91,7 +91,7 @@ class PlayerVaults extends PluginBase{
 			}
 		}
 
-		$sender->sendMessage(TextFormat::RED . "Usage: /" . $label . " <number> " . ($sender->hasPermission("playervaults.others.view") ? ""));
+		$sender->sendMessage(TextFormat::RED . "Usage: /" . $label . " <number> " . ($sender->hasPermission("AphelionNetwork.PlayerVaults.others.view") ? ""));
 		return false;
 	}
 }
