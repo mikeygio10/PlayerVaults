@@ -80,7 +80,7 @@ class PlayerVaults extends PluginBase{
 					}
 				}
 
-				$sender->sendMessage(TextFormat::GRAY . "Opening" . ($player === $sender->getName() ? "" : " " . $player . "'s") . " vault #" . $number . "...");
+				$sender->sendMessage(TextFormat::DARK_BLUE . "Opening" . ($player === $sender->getName() ? "" : " " . $player . "'s") . " vault #" . $number . "...");
 
 				$this->getDatabase()->loadVault($player, $number, function(Vault $vault) use($sender) : void{
 					if($sender->isOnline()){
@@ -91,7 +91,7 @@ class PlayerVaults extends PluginBase{
 			}
 		}
 
-		$sender->sendMessage(TextFormat::RED . "Usage: /" . $label . " <number> " . ($sender->hasPermission("playervaults.others.view") ? "[player=YOU]" : ""));
+		$sender->sendMessage(TextFormat::RED . "Usage: /" . $label . " <number> " . ($sender->hasPermission("playervaults.others.view") ? ""));
 		return false;
 	}
 }
